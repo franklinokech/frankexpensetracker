@@ -24,9 +24,11 @@
                                     id="usernameField"
                                     class="form-control form-control-sm"
                             >
-                            <div class="invalid-feedback" style="display:none">
+                            <div class="usernameFeedbackArea invalid-feedback" style="display:none">
 
-                            </div>
+                            </div> 
+                            <p class="text-sm text-success usernameSuccesOutput"></p>
+                            <p></p>
                             <input
                                     type="email"
                                     name="email"
@@ -35,6 +37,10 @@
                                     class="form-control form-control-sm"
                                     py
                             >
+                            <div class="emailFeedbackArea invalid-feedback" style="display:none"></div>
+                            <p class="text-sm text-success emailSuccesOutput"></p>
+                            <p></p>
+                            
 
                             <input
                                     type="password"
@@ -43,8 +49,9 @@
                                     id="passwordField"
                                     class="form-control form-control-sm"
                             >
+                            <p></p>
 
-                            <small class="float-right">Show</small>
+                            <small class="float-right showPasswordToggle">Show</small>
 
 
                         </div>
