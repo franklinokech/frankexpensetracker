@@ -1,17 +1,22 @@
 {% extends 'base_auth.html' %}
+{% load static %}
 
 {% block content %}
+
     <div class="row">
-        <div class="col-md-3"></div>
+        <div class="col-md-2"></div>
         <div class="col-md-6">
 
-            <div class="card">
+            <div class="card mt-5">
                 <div class="card-title">
                     <h4>Register for a free account</h4>
 
+                </div>
+                <div class="card-body">
                     <form action="" method="post">
                         <div class="form-group">
                             {% csrf_token %}
+
                             <input
                                     type="text"
                                     name="username"
@@ -19,13 +24,23 @@
                                     id="usernameField"
                                     class="form-control form-control-sm"
                             >
+                            <div class="usernameFeedbackArea invalid-feedback" style="display:none">
+
+                            </div> 
+                            <p class="text-sm text-success usernameSuccesOutput"></p>
+                            <p></p>
                             <input
                                     type="email"
                                     name="email"
                                     placeholder="Email"
                                     id="emailField"
                                     class="form-control form-control-sm"
+                                    py
                             >
+                            <div class="emailFeedbackArea invalid-feedback" style="display:none"></div>
+                            <p class="text-sm text-success emailSuccesOutput"></p>
+                            <p></p>
+                            
 
                             <input
                                     type="password"
@@ -34,23 +49,31 @@
                                     id="passwordField"
                                     class="form-control form-control-sm"
                             >
+                            <p></p>
 
-                            <small class="float-right">Show</small>
+                            <small class="float-right showPasswordToggle">Show</small>
 
 
                         </div>
-                        <input type="submit" value="Register" class="btn btn-block">
+                        <input type="submit" value="Register" class="btn btn-block btn-primary">
 
 
 
                     </form>
                 </div>
+
+                </div>
             </div>
 
 
         </div>
-        <div class="col-md-3"></div>
+        <div class="col-md-4"></div>
     </div>
 
+
+
+    <script src="{% static 'js/register.js' %}">
+
+    </script>
 
 {% endblock content %}
